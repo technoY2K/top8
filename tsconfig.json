@@ -16,5 +16,7 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["src", "hardhat.config.ts"]
+    "exclude": ["dist", "node_modules"],
+    "include": ["./src", "./scripts", "./test", "./hardhat.config.ts"],
+    "files": ["./hardhat.config.ts"]
 }
