@@ -1,11 +1,5 @@
 function App() {
-    return (
-        <div className="App h-screen">
-            <div className="h-3/4 bg-black">
-                <button>Click Me</button>
-            </div>
-        </div>
-    );
+    return <div className="App"></div>;
 }
 
 export default App;
