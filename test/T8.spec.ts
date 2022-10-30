@@ -9,7 +9,7 @@ describe("T8", () => {
 
             await contract.deployed();
 
-            expect(await contract.get(0)).to.equal("alice");
+            expect(await contract.getNameAtSpot(0)).to.equal("alice");
         });
     });
 });

@@ -7,7 +7,7 @@ pragma solidity ^0.8.9;
 contract T8 {
     string[] private spots = ["alice", "bob", "eve"];
 
-    function get(uint i) public view returns (string memory) {
+    function getNameAtSpot(uint i) public view returns (string memory) {
         return spots[i];
     }
 }

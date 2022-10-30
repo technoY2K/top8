@@ -23,17 +23,20 @@ import type {
 
 export interface T8Interface extends utils.Interface {
   functions: {
-    "get(uint256)": FunctionFragment;
+    "getNameAtSpot(uint256)": FunctionFragment;
   };
 
-  getFunction(nameOrSignatureOrTopic: "get"): FunctionFragment;
+  getFunction(nameOrSignatureOrTopic: "getNameAtSpot"): FunctionFragment;
 
   encodeFunctionData(
-    functionFragment: "get",
+    functionFragment: "getNameAtSpot",
     values: [PromiseOrValue<BigNumberish>]
   ): string;
 
-  decodeFunctionResult(functionFragment: "get", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "getNameAtSpot",
+    data: BytesLike
+  ): Result;
 
   events: {};
 }
@@ -65,19 +68,19 @@ export interface T8 extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
-    get(
+    getNameAtSpot(
       i: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<[string]>;
   };
 
-  get(
+  getNameAtSpot(
     i: PromiseOrValue<BigNumberish>,
     overrides?: CallOverrides
   ): Promise<string>;
 
   callStatic: {
-    get(
+    getNameAtSpot(
       i: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<string>;
@@ -86,14 +89,14 @@ export interface T8 extends BaseContract {
   filters: {};
 
   estimateGas: {
-    get(
+    getNameAtSpot(
       i: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    get(
+    getNameAtSpot(
       i: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
